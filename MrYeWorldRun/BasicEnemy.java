@@ -14,6 +14,14 @@ public class BasicEnemy extends Actor
      */
     public void act()
     {
-        // Add your action code here.
+        movement();        
+    }
+
+    public void movement(){
+        int min = 120;
+        int max = 120;
+        double y = min + Math.random() * (max - min);
+        int speed = (int) y;
+        setLocation(getX(), getY() + speed); 
     }
 }
