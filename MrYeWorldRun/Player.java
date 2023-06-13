@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Player extends Actor
 {
-    double vspeed = 0;
+    double yspeed = 0;
     boolean jumping = true;
     double gravity = 0.7;
     /**
@@ -23,19 +23,20 @@ public class Player extends Actor
 
         }
         if (Greenfoot.isKeyDown("a")){
-            move(-5);
+            move(5);
 
         }
         //gravity and floor code
         if (Greenfoot.isKeyDown("space") && jumping == false){
-            vspeed = -12;
+            yspeed = -12;
             jumping = true;
 
         }
-        vspeed = vspeed + gravity;
-        setLocation(getX(), getY() + (int)vspeed);
+        yspeed = yspeed + gravity;
+        setLocation(getX(), getY() + (int)yspeed);
+
         if (isTouching(floor.class)){
-            vspeed = 0;
+            yspeed = 0;
             jumping = false;
 
         } 
