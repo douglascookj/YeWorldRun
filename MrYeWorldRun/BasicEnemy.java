@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class BasicEnemy extends Actor
 {
-    int timer = 100;
+    int timer = 80;
     /**
      * Act - do whatever the BasicEnemy wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -17,23 +17,18 @@ public class BasicEnemy extends Actor
     {
         movement(); 
         timer--;
-        
     }
 
     public void movement(){
-        int min = 0;
-        int max = 20;
-        double y = min + Math.random() * (max - min);
-        int speed = (int) y;
-        
-        if (timer >= 50){
+        int speed = 3;
+        if (timer >= 40){
             setLocation(getX(), getY() - speed); 
-
         }
-        else if (timer <= 50){
+        else if (timer <= 40){
             setLocation(getX(), getY() + speed);
-            
         }
-        
+        if (timer == 0){
+            timer = 80;
+        }
     }
 }
