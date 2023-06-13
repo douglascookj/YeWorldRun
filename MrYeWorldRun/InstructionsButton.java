@@ -14,9 +14,9 @@ public class InstructionsButton extends Actor
      */
     public void act()
     {
-         if (Greenfoot.mousePressed(null))
+         if (Greenfoot.mousePressed(this))
 {
-   getWorld().addObject(new InstructionPanel(), 500, 300);
+   getWorld().addObject(new InstructionPanel(), 500, 400);
 }
     }
 }

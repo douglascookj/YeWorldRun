@@ -14,6 +14,8 @@ public class InstructionPanel extends Actor
      */
     public void act()
     {
-        // Add your action code here.
+        if (Greenfoot.mousePressed(this)){
+            getWorld().removeObject(this);
+        }
     }
 }

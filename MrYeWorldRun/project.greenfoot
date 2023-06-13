@@ -2,6 +2,7 @@
 class.InstructionPanel.image=space.jpg
 class.InstructionsButton.image=instructbut.png
 class.StartButton.image=0a8a31a07ea245d\ (1).png
+class.StartScreen.image=yeback1.png
 dependency1.from=StartScreen
 dependency1.to=StartButton
 dependency1.type=UsesDependency
