@@ -23,7 +23,7 @@ public class Player extends Actor
 
         }
         if (Greenfoot.isKeyDown("a")){
-            move(5);
+            move(-5);
 
         }
         //gravity and floor code
