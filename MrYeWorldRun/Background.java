@@ -12,7 +12,7 @@ public class Background extends World
 {
      
     private static final String bgImageName = "lvl1bg.jpg";
-    private static final double scrollSpeed = 6;
+    public static final double scrollSpeed = 6;
     private static final int picWidth = (new GreenfootImage(bgImageName)).getWidth();
  
     private GreenfootImage bgImage, bgBase;
