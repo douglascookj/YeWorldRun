@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class MyWorld here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Tyler Moore) 
+ * @version (0.1)
  */
 public class MyWorld extends World
 {
@@ -16,6 +16,8 @@ public class MyWorld extends World
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        super(1000, 600, 1); 
+        addObject(new Player(), 100, 700);
+        addObject(new floor(), 500, 780);
     }
 }
