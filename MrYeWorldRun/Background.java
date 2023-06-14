@@ -25,6 +25,8 @@ public class Background extends World
         bgImage = new GreenfootImage(getBackground());
         bgBase = new GreenfootImage(picWidth, getHeight());
         bgBase.drawImage(bgImage, 0, 0);
+        
+        addObject(new Ground(), 500, 500);
     }
      
      public void act()
