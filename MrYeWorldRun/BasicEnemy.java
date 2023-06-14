@@ -16,6 +16,7 @@ public class BasicEnemy extends Actor
     public void act()
     {
         movement(); 
+        contact();
         timer--;
     }
 
@@ -30,5 +31,11 @@ public class BasicEnemy extends Actor
         if (timer == 0){
             timer = 80;
         }
+    }
+
+    public void contact(){
+        // if (isTouching(Projectile.class)){
+            // removeTouching(BasicEnemy.class);
+        // }
     }
 }
