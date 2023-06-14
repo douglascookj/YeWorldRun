@@ -4,21 +4,21 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * Write a description of class MrYe here.
  * 
  * @author (Tyler Moore) 
- * @version (0.1)
+ * @version (0.2)
  */
 public class Player extends Actor
 {
     double yspeed = 0;
     boolean jumping = true;
     double gravity = 0.7;
-    int antiSpamCounter = 0;
+
     /**
      * Act - do whatever the MrYe wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()
     {
-       antiSpamCounter++;
+
         //movement
         if (Greenfoot.isKeyDown("d")){
             move(5);
@@ -42,12 +42,6 @@ public class Player extends Actor
             jumping = false;
 
         } 
-        //projectile code
-        MouseInfo mouse = Greenfoot.getMouseInfo();
-        if (mouse != null && mouse.getButton() == 1 && antiSpamCounter > 25){
-            getWorld().addObject(new Projectile(), getX(), getY());
-            antiSpamCounter = 0;
-        }
 
     }
 }
