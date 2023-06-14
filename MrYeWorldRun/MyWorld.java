@@ -25,7 +25,7 @@ public class MyWorld extends World
     }
 
     public void act(){
-        //sets location for arm
+        //sets location for arm(arm tracks player)
         int gX = player.getX();
         int gY = player.getY();
         playerArm.setLocation(gX + 13,gY - 8);
