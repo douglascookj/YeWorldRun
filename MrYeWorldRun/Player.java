@@ -11,7 +11,6 @@ public class Player extends Actor
     double yspeed = 0;
     boolean jumping = true;
     double gravity = 0.7;
-    int heath = 3;
     /**
      * Act - do whatever the MrYe wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -43,12 +42,9 @@ public class Player extends Actor
 
         } 
         if (isTouching(Obstacle.class)){
-            heath--;
+
             //getWorld()removeTouching(Obstacle.class);
-            if (heath <= 0){
-                
-            }
-            
+
         }
     }
 }
