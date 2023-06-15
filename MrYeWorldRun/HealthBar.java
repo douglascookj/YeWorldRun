@@ -35,7 +35,9 @@ public class HealthBar extends Player
         myImage.fillRect(1, 1, health*pixelsPerHealthPoint, healthBarHeight);
 
     }
+
     public void loseHealth(){
         health--;
+
     }
 }
