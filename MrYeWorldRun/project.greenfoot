@@ -1,16 +1,12 @@
 #Greenfoot project file
-
-class.BasicEnemy.image=flower.png
-class.Counter.image=Counter.png
-class.Player.image=kangaroo.png
-class.PlayerArm.image=alligator.png
-class.Projectile.image=ball.png
-class.floor.image=car01.png
 class.Bush.image=Bush.png
 class.Desk.image=Desk.png
 class.Ground.image=ground.png
 class.InstructionPanel.image=space.jpg
 class.InstructionsButton.image=instructbut.png
+class.Player.image=kangaroo.png
+class.PlayerArm.image=alligator.png
+class.Projectile.image=ball.png
 class.Rock.image=Rock.png
 class.StartButton.image=0a8a31a07ea245d\ (1).png
 class.StartScreen.image=yeback1.png
@@ -50,10 +46,10 @@ dependency8.type=UsesDependency
 dependency9.from=Player
 dependency9.to=Obstacle
 dependency9.type=UsesDependency
-editor.fx.0.height=739
-editor.fx.0.width=816
-editor.fx.0.x=129
-editor.fx.0.y=85
+editor.fx.0.height=0
+editor.fx.0.width=0
+editor.fx.0.x=0
+editor.fx.0.y=0
 height=1000
 package.numDependencies=12
 package.numTargets=15
@@ -181,4 +177,3 @@ width=1296
 world.lastInstantiated=Background
 xPosition=0
 yPosition=0
-

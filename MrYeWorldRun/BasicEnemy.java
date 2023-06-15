@@ -34,8 +34,8 @@ public class BasicEnemy extends Actor
     }
 
     public void contact(){
-        // if (isTouching(Projectile.class)){
-            // removeTouching(BasicEnemy.class);
-        // }
+        if (isTouching(Projectile.class)){
+            getWorld().removeObject(this);
+         }
     }
 }
