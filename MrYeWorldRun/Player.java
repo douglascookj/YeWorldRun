@@ -11,14 +11,18 @@ public class Player extends Actor
     double yspeed = 0;
     boolean jumping = true;
     double gravity = 0.7;
-    int heath = 3;
     /**
      * Act - do whatever the MrYe wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()
     {
+        //if touching the obstacle it will call on the hit obstacle method
+        if (isTouching(Obstacle.class)){
 
+            hitObstacle();
+
+        }
         //movement
         if (Greenfoot.isKeyDown("d")){
             move(5);
@@ -42,14 +46,16 @@ public class Player extends Actor
             jumping = false;
 
         } 
-        if (isTouching(Obstacle.class)){
-            heath--;
-            //getWorld()removeTouching(Obstacle.class);
-            if (heath <= 0){
-                
-            }
-            
-        }
+
+    }
+
+    public void hitObstacle(){
+        //getting healthbar object from backgroun world to use it here
+        World myWorld = getWorld();
+        Background background = (Background)myWorld;
+        HealthBar healthbar = background.getHealthBar();
+        //calls the losehealth method in the healthbar
+        healthbar.loseHealth();
     }
 }
 
