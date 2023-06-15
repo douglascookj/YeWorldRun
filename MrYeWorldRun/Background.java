@@ -17,6 +17,10 @@ public class Background extends World
  
     private GreenfootImage bgImage, bgBase;
     private int scrollPosition = 0;
+    
+    Player player = new Player();
+    PlayerArm playerArm = new PlayerArm();
+
      
     public Background()
     {    
@@ -27,6 +31,10 @@ public class Background extends World
         bgBase.drawImage(bgImage, 0, 0);
         
         addObject(new Ground(), 500, 500);
+        
+        addObject(player, 100, 500);
+        addObject(playerArm, 100, 500);
+
     }
      
      public void act()
@@ -35,6 +43,12 @@ public class Background extends World
         while(scrollSpeed > 0 && scrollPosition < -picWidth) scrollPosition += picWidth;
         while(scrollSpeed < 0 && scrollPosition > 0) scrollPosition -= picWidth;
         paint(scrollPosition);
+        
+        //sets location for arm(arm tracks player)
+        int gX = player.getX();
+        int gY = player.getY();
+        playerArm.setLocation(gX + 13,gY - 8);
+
     }
      
      private void paint(int position)
