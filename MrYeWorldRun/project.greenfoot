@@ -25,11 +25,19 @@ dependency5.type=UsesDependency
 dependency6.from=StartButton
 dependency6.to=Background
 dependency6.type=UsesDependency
+<<<<<<< Updated upstream
 editor.fx.0.height=0
 editor.fx.0.width=0
 editor.fx.0.x=0
 editor.fx.0.y=0
 height=1056
+=======
+editor.fx.0.height=739
+editor.fx.0.width=816
+editor.fx.0.x=232
+editor.fx.0.y=82
+height=1000
+>>>>>>> Stashed changes
 package.numDependencies=6
 package.numTargets=11
 project.charset=UTF-8
@@ -124,7 +132,12 @@ target9.width=120
 target9.x=0
 target9.y=0
 version=3.0.0
+<<<<<<< Updated upstream
 width=1936
 world.lastInstantiated=Background
+=======
+width=1296
+world.lastInstantiated=StartScreen
+>>>>>>> Stashed changes
 xPosition=0
 yPosition=0
