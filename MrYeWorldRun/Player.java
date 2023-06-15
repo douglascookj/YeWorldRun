@@ -17,7 +17,12 @@ public class Player extends Actor
      */
     public void act()
     {
+        //if touching the obstacle it will call on the hit obstacle method
+        if (isTouching(Obstacle.class)){
 
+            hitObstacle();
+
+        }
         //movement
         if (Greenfoot.isKeyDown("d")){
             move(5);
@@ -41,11 +46,16 @@ public class Player extends Actor
             jumping = false;
 
         } 
-        if (isTouching(Obstacle.class)){
 
-            //getWorld()removeTouching(Obstacle.class);
+    }
 
-        }
+    public void hitObstacle(){
+        //getting healthbar object from backgroun world to use it here
+        World myWorld = getWorld();
+        Background background = (Background)myWorld;
+        HealthBar healthbar = background.getHealthBar();
+        //calls the losehealth method in the healthbar
+        healthbar.loseHealth();
     }
 }
 
