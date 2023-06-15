@@ -1,12 +1,16 @@
 #Greenfoot project file
+
+class.BasicEnemy.image=flower.png
+class.Counter.image=Counter.png
+class.Player.image=kangaroo.png
+class.PlayerArm.image=alligator.png
+class.Projectile.image=ball.png
+class.floor.image=car01.png
 class.Bush.image=Bush.png
 class.Desk.image=Desk.png
 class.Ground.image=ground.png
 class.InstructionPanel.image=space.jpg
 class.InstructionsButton.image=instructbut.png
-class.Player.image=kangaroo.png
-class.PlayerArm.image=alligator.png
-class.Projectile.image=ball.png
 class.Rock.image=Rock.png
 class.StartButton.image=0a8a31a07ea245d\ (1).png
 class.StartScreen.image=yeback1.png
@@ -177,3 +181,4 @@ width=1296
 world.lastInstantiated=Background
 xPosition=0
 yPosition=0
+
