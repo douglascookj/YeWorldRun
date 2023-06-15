@@ -12,13 +12,14 @@ public class Player extends Actor
     boolean jumping = true;
     double gravity = 0.7;
     int heath = 3;
+    GifImage ye = new GifImage("Mr. Ye.gif");
     /**
      * Act - do whatever the MrYe wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()
     {
-
+        gif();
         //movement
         if (Greenfoot.isKeyDown("d")){
             move(5);
@@ -46,10 +47,15 @@ public class Player extends Actor
             heath--;
             //getWorld()removeTouching(Obstacle.class);
             if (heath <= 0){
-                
+
             }
-            
+
         }
+
+    }
+
+    public void gif(){
+        setImage(ye.getCurrentImage());
     }
 }
 
