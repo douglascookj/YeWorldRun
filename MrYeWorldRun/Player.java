@@ -37,14 +37,14 @@ public class Player extends Actor
         yspeed = yspeed + gravity;
         setLocation(getX(), getY() + (int)yspeed);
 
-        if (isTouching(floor.class)){
+        if (isTouching(Ground.class)){
             yspeed = 0;
             jumping = false;
 
         } 
         if (isTouching(Obstacle.class)){
             heath--;
-            getWorld().removeObject(Obstacle.class);
+            //getWorld()removeTouching(Obstacle.class);
             if (heath <= 0){
                 
             }
