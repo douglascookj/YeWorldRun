@@ -21,10 +21,7 @@ public class Background extends World
     Player player = new Player();
     PlayerArm playerArm = new PlayerArm();
 
-    Bush bush = new  Bush();
-
     HealthBar healthBar = new HealthBar();
-
     public HealthBar getHealthBar(){
         return healthBar;
     }
@@ -39,7 +36,7 @@ public class Background extends World
         bgBase.drawImage(bgImage, 0, 0);
 
         addObject(new Ground(), 500, 500);
-        addObject(bush, 700, 500);
+
         addObject(player, 100, 500);
         addObject(playerArm, 100, 500);
 

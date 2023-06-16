@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class HealthBar extends Player
 {
     //health amount, size of health bar, and how many pixels per amount of health
-    int health = 4;
+    int health = 10;
     int healthBarWidth = 80;
     int healthBarHeight = 15;
     int pixelsPerHealthPoint = (int)healthBarWidth/health;
