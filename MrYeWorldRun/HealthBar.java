@@ -30,7 +30,7 @@ public class HealthBar extends Player
         //sets healthbar image and sets it to the size we want from the variables
         setImage (new GreenfootImage(healthBarWidth + 2, healthBarHeight + 2));
         GreenfootImage myImage = getImage();
-        myImage.setColor(Color.WHITE);
+        myImage.setColor(Color.RED);
         myImage.drawRect(0, 0, healthBarWidth + 1, healthBarHeight + 1);
         myImage.fillRect(1, 1, health*pixelsPerHealthPoint, healthBarHeight);
 
