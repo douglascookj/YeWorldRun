@@ -26,6 +26,12 @@ public class Player extends Actor
             hitObstacle();
 
         }
+         if (isTouching(BasicEnemy.class)){
+
+            hitObstacle();
+
+        }
+        
         //movement
         if (Greenfoot.isKeyDown("d")){
             move(5);
@@ -37,7 +43,7 @@ public class Player extends Actor
         }
         //gravity and floor code
         if (Greenfoot.isKeyDown("space") && jumping == false){
-            yspeed = -12;
+            yspeed = -17;
             jumping = true;
 
         }

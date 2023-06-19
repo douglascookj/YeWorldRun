@@ -39,5 +39,7 @@ public class HealthBar extends Player
     public void loseHealth(){
         health--;
 
+        removeTouching(Obstacle.class);
+
     }
 }

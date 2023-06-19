@@ -28,5 +28,4 @@ public class Obstacle extends Actor
         }
 
     }
-
 }
