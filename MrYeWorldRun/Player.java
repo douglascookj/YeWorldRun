@@ -10,8 +10,7 @@ public class Player extends Actor
 {
     double yspeed = 0;
     boolean jumping = true;
-    double gravity = 0.3;
-    int heath = 3;
+    double gravity = 0.4;
     GifImage ye = new GifImage("Mr. Ye.gif");
     /**
      * Act - do whatever the MrYe wants to do. This method is called whenever
@@ -42,7 +41,7 @@ public class Player extends Actor
         }
         //gravity and floor code
         if (Greenfoot.isKeyDown("space") && jumping == false){
-            yspeed = -12;
+            yspeed = -16;
             jumping = true;
 
         }
@@ -54,14 +53,6 @@ public class Player extends Actor
             jumping = false;
 
         } 
-        if (isTouching(Obstacle.class)){
-            heath--;
-            //getWorld()removeTouching(Obstacle.class);
-            if (heath <= 0){
-
-            }
-
-        }
 
     }
 
