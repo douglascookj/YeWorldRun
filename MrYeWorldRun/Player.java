@@ -20,7 +20,12 @@ public class Player extends Actor
     public void act()
     {
         gif();
-        //if touching the obstacle it will call on the hit obstacle method
+        //if touching the obstacle or BasicEnemy it will call on the hit obstacle method
+        if (isTouching(BasicEnemy.class)){
+
+            hitObstacle();
+
+        }
         if (isTouching(Obstacle.class)){
 
             hitObstacle();
@@ -73,7 +78,8 @@ public class Player extends Actor
         //calls the losehealth method in the healthbar
         healthbar.loseHealth();
         removeTouching(Obstacle.class);
-        
+        if (isTouching(BasicEnemy.class)){
+            removeTouching(BasicEnemy.class);}
     }
 }
 
