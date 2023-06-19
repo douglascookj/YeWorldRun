@@ -10,7 +10,7 @@ public class Player extends Actor
 {
     double yspeed = 0;
     boolean jumping = true;
-    double gravity = 0.7;
+    double gravity = 0.3;
     int heath = 3;
     GifImage ye = new GifImage("Mr. Ye.gif");
     /**
