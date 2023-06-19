@@ -16,14 +16,16 @@ public class Obstacle extends Actor
      */
     public void act()
     {
-        
+
     }
+
     public void move(){
         move(-(int)Background.scrollSpeed);
-        
+
         if(isAtEdge())
         {
             getWorld().removeObject(this);
-        }
+        } 
+
     }
 }
