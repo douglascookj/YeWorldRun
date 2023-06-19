@@ -37,8 +37,8 @@ public class Background extends World
 
         addObject(new Ground(), 500, 500);
 
-        addObject(player, 100, 500);
-        addObject(playerArm, 100, 500);
+        addObject(player, 100, 400);
+        addObject(playerArm, 100, 400);
 
     }
 
