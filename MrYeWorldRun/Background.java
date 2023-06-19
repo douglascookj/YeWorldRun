@@ -22,10 +22,10 @@ public class Background extends World
     PlayerArm playerArm = new PlayerArm();
 
     HealthBar healthBar = new HealthBar();
-    
     public HealthBar getHealthBar(){
         return healthBar;
     }
+
     public Background()
     {    
         super(1000, 600, 1);

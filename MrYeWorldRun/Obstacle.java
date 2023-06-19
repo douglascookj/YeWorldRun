@@ -25,8 +25,7 @@ public class Obstacle extends Actor
         if(isAtEdge())
         {
             getWorld().removeObject(this);
-        }
+        } 
 
     }
-
 }

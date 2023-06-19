@@ -72,6 +72,8 @@ public class Player extends Actor
         HealthBar healthbar = background.getHealthBar();
         //calls the losehealth method in the healthbar
         healthbar.loseHealth();
+        removeTouching(Obstacle.class);
+        
     }
 }
 
