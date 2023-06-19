@@ -38,6 +38,8 @@ public class HealthBar extends Player
 
     public void loseHealth(){
         health--;
-
+        if (health <= 0){
+            Greenfoot.setWorld(new LoseWorld());
+        }
     }
 }
