@@ -95,4 +95,8 @@ public class Background extends World
         }
         return o;
     }
+    
+    public int getTimer(){
+        return timer;
+    }
 }
