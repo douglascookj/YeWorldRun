@@ -10,7 +10,9 @@ import greenfoot.*;
 
 public class Background extends World
 {
-
+    private int timer = 0;
+    private int antiSpamCounter;
+    private int antiSpamCounterTwo;
     private static final String bgImageName = "lvl1bg.jpg";
     public static final double scrollSpeed = 6;
     private static final int picWidth = (new GreenfootImage(bgImageName)).getWidth();
@@ -44,6 +46,10 @@ public class Background extends World
 
     public void act()
     {
+        timer++;
+        antiSpamCounter++;
+        antiSpamCounterTwo++;
+        showText("" + timer / 60, 30, 30);
         scrollPosition -= scrollSpeed;
         while(scrollSpeed > 0 && scrollPosition < -picWidth) scrollPosition += picWidth;
         while(scrollSpeed < 0 && scrollPosition > 0) scrollPosition -= picWidth;
@@ -54,6 +60,17 @@ public class Background extends World
         int gY = player.getY();
         playerArm.setLocation(gX + 13,gY - 8);
 
+        if (timer / 60 % 4==0 && antiSpamCounter > 60){
+            addObject(getRandomObstacle(), 1000, 450);
+
+            antiSpamCounter = 0;
+        }
+        if (timer / 60 % 4==0 && antiSpamCounterTwo > 60){
+            addObject(new BasicEnemy(), 500, 250);
+
+            antiSpamCounterTwo = 0;
+        }
+
     }
 
     private void paint(int position)
@@ -61,5 +78,21 @@ public class Background extends World
         GreenfootImage bg = getBackground();
         bg.drawImage(bgBase, position, 0);
         bg.drawImage(bgImage, position + picWidth, 0);
+    }
+
+    private Obstacle getRandomObstacle(){
+        Obstacle o = new Obstacle();
+        int x = Greenfoot.getRandomNumber(3);
+
+        if (x == 0){
+            o = new Bush();
+        }
+        if (x == 1){
+            o = new Rock();
+        }
+        if (x == 2){
+            o = new Desk();
+        }
+        return o;
     }
 }
